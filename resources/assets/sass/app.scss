@@ -8,6 +8,12 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+// Font Awesome
+@import '~font-awesome/css/font-awesome.css';
+
+//Snotify
+@import '~vue-snotify/styles/simple.css';
+
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);

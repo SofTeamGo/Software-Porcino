@@ -4757,13 +4757,13 @@ small {
   box-shadow: 0 0 0 #000; }
   .brand-header > .brand-header-logo {
     display: block;
-    height: 100%;
+    height: 110px;
     text-decoration: none;
     color: inherit;
     padding: 1rem 0; }
     .brand-header > .brand-header-logo > img,
     .brand-header > .brand-header-logo > svg {
-      width: auto;
+      width: 50%;
       max-height: 100%; }
       .brand-header > .brand-header-logo > img + .brand-header-logo-text,
       .brand-header > .brand-header-logo > svg + .brand-header-logo-text {
