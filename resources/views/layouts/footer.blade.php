@@ -12,13 +12,5 @@
     		<em class="ion-home"></em>
     		<span>Dashboard</span>
     	</a>
-    	<a class="footer-icon" href="#">
-    		<em class="ion-map"></em>
-    		<span>Maps</span>
-    	</a>
-    	<a class="footer-icon" href="#">
-    		<em class="ion-pie-graph"></em>
-    		<span>Charts</span>
-    	</a>
     </div>
 </footer>

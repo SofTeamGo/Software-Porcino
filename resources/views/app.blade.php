@@ -6,21 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="shortcut icon" href="{{{ asset('img/logo.png') }}}">
     <link href="{{{ asset('css/app.css') }}}" rel="stylesheet">
     <link href="{{{ asset('css/main.css') }}}" rel="stylesheet">
     <link href="{{{ asset('css/ionicons.css') }}}" rel="stylesheet">
   </head>
-  <body class="theme-dark-2">
-    <div class="layout-container">
-      <!-- top navbar-->
-      @include('layouts.navbar')
-
-      <!-- sidebar-->
-      @include('layouts.sidebar')
-      <div class="sidebar-layout-obfuscator"></div>
-
-      <!-- Main section-->
-      <div class="main-container" id="app">
+  <body class="{{ Auth::check() ? 'theme-dark-2' : 'my-login-page' }}">
+    <div class="{{ Auth::check() ? 'layout-container' : '' }}">
+      @auth
+        @include('layouts.navbar')
+        @include('layouts.search')
+        @include('layouts.sidebar')
+      @endauth
+      <div class="{{ Auth::check() ? 'main-container' : '' }}" id="app">
+        @yield('login')
         <section class="section-container">
           <div class="container-fluid">
             <div class="row">
@@ -30,14 +29,11 @@
             </div>
           </div>
         </section>
-        <!-- Page footer-->
-        @include('layouts.footer')
+        @auth
+          @include('layouts.footer')
+        @endauth 
       </div>
     </div>
-
-    <!-- Search template-->
-    @include('layouts.search')
-
     <script src="{{{ asset('js/app.js') }}}"></script>
     <script src="{{{ asset('js/main.js') }}}"></script>
   </body>

@@ -11,9 +11,7 @@
 |
  */
 
-Route::get('/', function () {
-    return view('dashboard.index');
-});
+Route::get('/', 'Auth\LoginController@ShowLoginForm');
 
 Route::get('/females', function () {
     return view('reproducers/females.index');
@@ -27,4 +25,6 @@ Route::get('/calendar', function () {
     return view('calendar.index');
 });
 
-Route::post('/login', 'Auth\LoginController@login');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

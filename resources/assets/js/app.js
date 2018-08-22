@@ -4,7 +4,7 @@ import Snotify from 'vue-snotify'
 
 Vue.use(Snotify)
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('login-form', require('./pages/auth/Login.vue'));
 Vue.component('example-form', require('./components/Form.vue'));
 
 const app = new Vue({

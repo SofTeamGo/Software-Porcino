@@ -11,8 +11,8 @@
   <div class="sidebar-content">
     <nav class="sidebar-nav">
       <ul>
-        <li class="{{ Request::is('/') ? 'active' : '' }}">
-          <a href="{{ url('/') }}">
+        <li class="{{ Request::is('home') ? 'active' : '' }}">
+          <a href="{{ url('home') }}">
             <span class="float-right nav-label"></span>
             <span class="nav-icon">
               <em class="ion-ios-speedometer-outline"></em>
