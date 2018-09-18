@@ -1,6 +1,5 @@
 <template>
   <section class="h-100">
-    <vue-snotify/>
     <div class="container h-100">
       <div class="row justify-content-md-center h-100">
         <div class="card-wrapper">
@@ -92,7 +91,10 @@
         // Submit the form via a POST request
         this.form.post('/login', this.form)
         .then(({ data }) => { 
-          window.location.href = '/home'
+          this.$store.dispatch('getPermissionsUser')
+          .then(()=>{
+            window.location.href = '/home'
+          })
         })
       }
     }  

@@ -5,7 +5,7 @@
     </div>
     <a class="brand-header-logo" href="#">
       <!-- Logo Image-->
-      <img src="img/logo.png", alt="logo"/>
+      <img src="/img/logo.png", alt="logo"/>
     </a>
   </div>
   <div class="sidebar-content">
@@ -62,19 +62,68 @@
           </a>
           <ul class="sidebar-subnav">
             <li>
-              <a href="forms.standard.html">
+              <a href="{{ url('inseminations/create') }}">
                 <span class="float-right nav-label"></span>
-                <span>Standard</span>
+                <span>Inseminación</span>
+              </a>
+            </li>
+            <li>
+              <a href="{{ url('weanings/create') }}">
+                <span class="float-right nav-label"></span>
+                <span>Destete</span>
               </a>
             </li>
             <li>
               <a href="forms.advanced.html">
                 <span class="float-right nav-label"></span>
-                <span>Advanced</span>
+                <span>Aborto</span>
+              </a>
+            </li>
+            <li>
+              <a href="forms.advanced.html">
+                <span class="float-right nav-label"></span>
+                <span>Baja</span>
+              </a>
+            </li>
+            <li>
+              <a href="forms.advanced.html">
+                <span class="float-right nav-label"></span>
+                <span>Parto</span>
+              </a>
+            </li>
+            <li>
+              <a href="forms.advanced.html">
+                <span class="float-right nav-label"></span>
+                <span>Baja de lactantes</span>
+              </a>
+            </li>
+            <li>
+              <a href="forms.advanced.html">
+                <span class="float-right nav-label"></span>
+                <span>Tratamiento</span>
+              </a>
+            </li>
+            <li>
+              <a href="forms.advanced.html">
+                <span class="float-right nav-label"></span>
+                <span>Adopción</span>
+              </a>
+            </li>
+            <li>
+              <a href="forms.advanced.html">
+                <span class="float-right nav-label"></span>
+                <span>Traslado</span>
+              </a>
+            </li>
+            <li>
+              <a href="forms.advanced.html">
+                <span class="float-right nav-label"></span>
+                <span>Extracción de semen</span>
               </a>
             </li>
           </ul>
         </li>
+        @can('roles.index')
         <li class="{{ Request::is('calendar') ? 'active' : '' }}">
           <a href="{{ url('calendar') }}">
             <span class="float-right nav-label"></span>
@@ -83,6 +132,51 @@
             </span>
             <span>Calendario</span>
           </a>
+        </li>
+        @endcan
+        <li>
+          <a href="#">
+            <span class="float-right nav-caret">
+              <em class="ion-ios-arrow-right"></em>
+            </span>
+            <span class="float-right nav-label"></span>
+            <span class="nav-icon">
+              <em class="ion-settings"></em>
+            </span>
+            <span>Configuraciones</span>
+          </a>
+          <ul class="sidebar-subnav">
+            <li>
+              <a href="forms.standard.html">
+                <span class="float-right nav-label"></span>
+                <span>Fases</span>
+              </a>
+            </li>
+            <li>
+              <a href="forms.advanced.html">
+                <span class="float-right nav-label"></span>
+                <span>Ubicaciones</span>
+              </a>
+            </li>
+            <li>
+              <a href="forms.standard.html">
+                <span class="float-right nav-label"></span>
+                <span>Genéticas</span>
+              </a>
+            </li>
+            <li>
+              <a href="forms.standard.html">
+                <span class="float-right nav-label"></span>
+                <span>Roles</span>
+              </a>
+            </li>
+            <li>
+              <a href="forms.standard.html">
+                <span class="float-right nav-label"></span>
+                <span>Usuarios</span>
+              </a>
+            </li>
+          </ul>
         </li>
         <li>
           <div class="sidebar-nav-heading">Engorde</div>
@@ -99,15 +193,15 @@
           </a>
           <ul class="sidebar-subnav" id="user">
             <li>
-              <a href="signin.html">
+              <a href="{{ url('groups/create') }}">
                 <span class="float-right nav-label"></span>
-                <span>Signin</span>
+                <span>Registrar nuevo</span>
               </a>
             </li>
             <li>
               <a href="signup.html">
                 <span class="float-right nav-label"></span>
-                <span>Signup</span>
+                <span>Ver todos</span>
               </a>
             </li>
           </ul>

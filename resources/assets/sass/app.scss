@@ -14,6 +14,13 @@
 //Snotify
 @import '~vue-snotify/styles/simple.css';
 
+// DataTables
+@import "~datatables.net-bs4/css/dataTables.bootstrap4.min.css";
+@import "~datatables.net-responsive-bs4/css/responsive.bootstrap4.css";
+
+//Spinkit
+@import "~spinkit/scss/spinners/9-cube-grid";
+
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);

@@ -160,9 +160,13 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        //local added
+        App\Providers\FemaleServiceProvider::class,
+
         //added
         Collective\Html\HtmlServiceProvider::class,
         Caffeinated\Shinobi\ShinobiServiceProvider::class,
+        Yajra\DataTables\DataTablesServiceProvider::class,
 
     ],
 
@@ -213,9 +217,13 @@ return [
         'Validator'    => Illuminate\Support\Facades\Validator::class,
         'View'         => Illuminate\Support\Facades\View::class,
 
+        //local added
+        'Female'       => App\Helpers\Female::class,
+
         //added
         'Form'         => Collective\Html\FormFacade::class,
         'Html'         => Collective\Html\HtmlFacade::class,
+        'DataTables'   => Yajra\DataTables\Facades\DataTables::class,
     ],
 
 ];

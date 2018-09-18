@@ -48,7 +48,7 @@
     <ul class="float-right">
       <li class="dropdown">
         <a class="dropdown-toggle has-badge" href="#" data-toggle="dropdown">
-          <img class="header-user-image" src="img/nano.jpg" alt="header-user-image">
+          <img class="header-user-image" src="/img/nano.jpg" alt="header-user-image">
         </a>
         <div class="dropdown-menu dropdown-menu-right dropdown-scale">
           <h6 class="dropdown-header">User menu</h6>

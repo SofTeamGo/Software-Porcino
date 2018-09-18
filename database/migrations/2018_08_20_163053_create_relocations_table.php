@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
-class CreateReproducersTable extends Migration
+class CreateRelocationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateReproducersTable extends Migration
      */
     public function up()
     {
-        Schema::create('reproducers', function (Blueprint $table) {
+        Schema::create('relocations', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class CreateReproducersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reproducers');
+        Schema::dropIfExists('relocations');
     }
 }

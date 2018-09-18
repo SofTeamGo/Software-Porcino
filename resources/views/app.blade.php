@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="shortcut icon" href="{{{ asset('img/logo.png') }}}">
+    <link rel="shortcut icon" href="{{{ asset('img/login.png') }}}">
     <link href="{{{ asset('css/app.css') }}}" rel="stylesheet">
     <link href="{{{ asset('css/main.css') }}}" rel="stylesheet">
     <link href="{{{ asset('css/ionicons.css') }}}" rel="stylesheet">
   </head>
-  <body class="{{ Auth::check() ? 'theme-dark-2' : 'my-login-page' }}">
+  <body class="{{ Auth::check() ? 'default-theme' : 'my-login-page' }}">
     <div class="{{ Auth::check() ? 'layout-container' : '' }}">
       @auth
         @include('layouts.navbar')

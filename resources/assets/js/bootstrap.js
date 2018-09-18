@@ -1,5 +1,10 @@
+import _ from 'lodash'
+import store from './store'
+import datatables from 'datatables.net'
+import datatables_bs4 from 'datatables.net-bs4'
+import datatables_res from 'datatables.net-responsive'
+import datatables_res_bs4 from 'datatables.net-responsive-bs4'
 
-window._ = require('lodash');
 window.Popper = require('popper.js').default;
 
 /**

@@ -15,7 +15,12 @@ class CreateSemenTable extends Migration
     {
         Schema::create('semen', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('code', 64);
+            $table->integer('genetics_id')->unsigned();
+            $table->softDeletes();
             $table->timestamps();
+
+            $table->foreign('genetics_id')->references('id')->on('genetics');
         });
     }
 
@@ -26,6 +31,6 @@ class CreateSemenTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('semens');
+        Schema::dropIfExists('semen');
     }
 }
